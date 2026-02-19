@@ -1,3 +1,4 @@
+/* AAYUSHI SHARMA */
 body {
   font-family: Arial, sans-serif;
   background: #f0f0f0;
@@ -8,6 +9,12 @@ body {
   min-height: 100vh;
   margin: 0;
 
+}
+.header {
+    position: absolute;   
+    top: 20px;           
+    left: 20px;           
+    text-align: left;
 }
 
 .main-box {

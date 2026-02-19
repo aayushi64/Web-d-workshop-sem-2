@@ -1,3 +1,4 @@
+// AAYUSHI SHARMA 
 let n, currentSubject, marksList, total;
 
 function calculate() {
