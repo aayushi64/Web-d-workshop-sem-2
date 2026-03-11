@@ -23,6 +23,21 @@
         for(let i=rows; i>=1; i--)
         console.log("* ".repeat(i));
 
+        //FLIPPED INVERTED PYRAMID
+        for(let i=rows; i>=1; i--){
+        console.log("  ".repeat(rows-i)+"* ".repeat(i));
+        }
+
+        //TRIANGLE
+        for(let i=1; i<=rows; i++){
+        console.log("\xa0".repeat(rows-i)+ "* ".repeat(i));
+        }
+
+
+        //INVERTED TRIANGLE
+         for(let i=rows; i>=1; i--){
+        console.log("\xa0".repeat(rows-i)+ "* ".repeat(i));
+        }
 
     </script>
 </body>
