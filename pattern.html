@@ -39,6 +39,57 @@
         console.log("\xa0".repeat(rows-i)+ "* ".repeat(i));
         }
 
+        // HALF DIAMOND PATTERN
+        for (let i = 1; i <= rows; i++) console.log("* ".repeat(i));
+        for (let i = 4; i >= 1; i--) console.log("* ".repeat(i));
+
+        //FLIPPED HALF DIAMOND PATTERN
+        for (let i = 1; i <= rows; i++) console.log("  ".repeat(rows - i) + "* ".repeat(i));
+        for (let i = 4; i >= 1; i--) console.log("  ".repeat(rows - i) + "* ".repeat(i));
+
+        //DIAMOND PATTERN
+        for (let i = 1; i <= rows; i++) console.log(" ".repeat(rows- i) + "* ".repeat(i));
+        for (let i = 4; i >= 1; i--) console.log(" ".repeat(rows- i) + "* ".repeat(i));
+
+        //HOURGLASS PATTERN
+        for (let i = rows; i >= 1; i--) console.log(" ".repeat(rows - i) + "* ".repeat(i));
+        for (let i = 2; i <= rows; i++) console.log(" ".repeat(rows- i) + "* ".repeat(i));
+
+        //NUMBER PYRAMID
+        for (let i = 1; i <= 4; i++) {
+        console.log((i + " ").repeat(i));
+        }
+
+        //ROTATED NUMBER PYRAMID
+        for (let i = 1; i <= 4; i++) {
+        let row = "  ".repeat(4 - i);
+        for (let j = 0; j < i; j++) row += (i + j) + " ";
+        console.log(row);
+        }
+
+        //PALINDROME TRIANGLE
+        for (let i = 1; i <= 4; i++) {
+        let row = "  ".repeat(4 - i);
+        for (let j = i; j < i * 2; j++) row += j + " ";
+        for (let j = i * 2 - 2; j >= i; j--) row += j + " ";
+        console.log(row);
+        }
+
+        //ALPHABET PYRAMID
+        for (let i = 0; i < 4; i++) {
+        let char = String.fromCharCode(65 + i);
+        console.log((char + " ").repeat(i + 1));
+        }
+
+        //CONTINUOUS ALPHABET PYRAMID
+        let code = 65; 
+        for (let i = 1; i <= 4; i++) {
+        let row = "";
+        for (let j = 0; j < i; j++) {
+            row += String.fromCharCode(code++) + " ";
+        }
+        console.log(row);
+        }
     </script>
 </body>
 </html>
