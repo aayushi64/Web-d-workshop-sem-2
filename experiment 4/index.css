@@ -1,0 +1,60 @@
+body {
+    background: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+}
+button {
+    background: #2d7df6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background: #1b5ed9;
+}
+.result {
+    margin-top: 15px;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    text-align: center;
+    width: 300px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translate(-50%, -10px);}
+    to {opacity: 1; transform: translate(-50%, 0);}
+}
+
+.popup-content input {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+}

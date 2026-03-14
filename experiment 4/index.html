@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Result Calculator</h2>
+    <label>Enter Number of Subjects</label>
+    <input type="number" id="subjects">
+    <div id="marksInputs"></div>
+
+    <button onclick="calculate()">Calculate Result</button>
+
+    <div class="result">
+        <p id="total"></p>
+        <p id="average"></p>
+        <p id="grade"></p>
+        <p id="result"></p>
+    </div>
+</div>
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <p id="popup-message"></p>
+    <input type="number" id="popup-input" placeholder="Enter marks">
+    <button onclick="submitMarks()">OK</button>
+  </div>
+</div>
+
+<script src="main.jsx"></script>
+</body>
+</html>
