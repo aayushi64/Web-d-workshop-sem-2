@@ -25,29 +25,103 @@
         // }
 
           // SWITCH CASE
-        let day = 3;
-        switch(day)
-{
-    case 1:
-        console.log("monday");
-        break;
-         case 2:
-        console.log("tuesday");
-        break;
-         case 3:
-        console.log("wednesday");
-        break;
-         case 4:
-        console.log("thursday");
-        break;
-         case 5:
-        console.log("friday");
-        break;
-         case 6:
-        console.log("weekend");
-        break;
-}
-        
+//         let day = 3;
+//         switch(day)
+// {
+//     case 1:
+//         console.log("monday");
+//         break;
+//          case 2:
+//         console.log("tuesday");
+//         break;
+//          case 3:
+//         console.log("wednesday");
+//         break;
+//          case 4:
+//         console.log("thursday");
+//         break;
+//          case 5:
+//         console.log("friday");
+//         break;
+//          case 6:
+//         console.log("weekend");
+//         break;
+// }
+
+        // JSON
+        // let student = {
+        //     name: "aayushi", age: 20
+        // }
+        // let jasondata=JSON.stringify(student);
+        // console.log(jasondata);
+
+        //JSON string format
+        //let jsonstring =`{"name":"aayushi","age":20};
+        // let obj= JSON.parse(jsonstring);
+        // console.log(obj.name);
+
+
+        //FOR IN LOOP
+        //let student = {
+        //name: "amit",
+        //age: 20,
+        //course: "MCA"
+        // };
+        // for (let key in student) {
+        //     console.log(key + " : " + student[key]);
+        // }
+
+
+        //FOR OF LOOP
+        // let numbers = [1, 2, 3, 4, 5];
+        // for (let num of numbers) {
+        //     console.log(num);
+        // }
+
+
+        //ASYNC/AWAIT
+        // function getdata() {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve("Data received");
+        //         }, 2000);
+        //     });
+        // }
+        // async function showdata(){
+        //     let result = await getdata();
+        //     console.log(result);
+        // }
+        // showdata();
+
+        //FETCH API
+        // fetch('https://jsonplaceholder.typicode.com/posts/1')
+        // .then(response => response.json())
+        // .then(data => console.log(data))
+        // .catch(error => console.log(error));
+
+
+        //ERROR HANDLING
+        // try {
+        // let x = y + 10;
+        // } catch (error) {
+        // console.log("An error occurred: ", error);
+        // }
+
+        // try {
+        //     let y = 5;
+        // let x = y + 10;
+        // console.log(x);
+        // } catch (error) {
+        // console.log("An error occurred: ", error);
+        // }
+
+        //LOCAL STORAGE
+        localStorage.setItem("name", "aayushi");
+        let name = localStorage.getItem("name");
+        console.log(name);
+        localStorage.removeItem("name");
+        console.log(localStorage.getItem("name"));
+
     </script>
 </body>
 </html>
