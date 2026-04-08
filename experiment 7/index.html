@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>exp7</title>
+    <!-- React Library -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./src/main.jsx">
+      function Welcome() {
+        return <h1>Welcome to exp7</h1>;
+      }
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<Welcome />);
+    </script>
+  </body>
+</html>
