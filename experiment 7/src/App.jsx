@@ -1,15 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import "./App.css";
+import Props from "./assets/components/Props";
+import UseState from "./assets/components/UseState";
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const name='React JS Library'
 
   return (
     <>
-      <section id="center">
+      <h1>Hello {name}</h1>
+      
+      {/* <Props name="Abhay" rollno="25B012232432" course="B.Tech"/> */}
+      <UseState/>
+    </>
+  )
+}
+
+export default App
+      {/* <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
           <img src={reactLogo} className="framework" alt="React logo" />
@@ -113,9 +121,4 @@ function App() {
       </section>
 
       <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
-}
-
-export default App
+      <section id="spacer"></section> */}
