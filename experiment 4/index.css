@@ -8,12 +8,6 @@ body {
     align-items: center;
     height: 100vh;
 }
-.header {
-    position: absolute;   
-    top: 20px;           
-    left: 20px;           
-    text-align: left;
-}
 
 .container {
     width: 400px;
