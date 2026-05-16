@@ -7,15 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">TechStore</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="mainMenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#">Products</a></li>
@@ -26,58 +26,64 @@
         </div>
     </nav>
 
-    <div class="container my-5">
+    <main class="container my-5">
         <div class="row g-4">
             
             <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="https://via.placeholder.com/300x200?text=Laptop" class="card-img-top" alt="Laptop">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Laptop</h5>
-                        <p class="card-text text-muted">High performance laptop</p>
-                        <p class="h5">₹50,000 <span class="badge badge-new fs-6">New</span></p>
-                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#productModal" onclick="updateModal('Laptop', 'High performance laptop with advanced features.', '₹50,000')">View Details</button>
+                <div class="card product-card h-100">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Laptop">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">Laptop</h5>
+                        <p class="text-muted">High performance laptop</p>
+                        <p class="price-display">₹50,000 <span class="badge status-new">New</span></p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailsModal" onclick="setModalContent('Laptop', 'High performance laptop with advanced features.', '₹50,000')">
+                            View Details
+                        </button>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="https://via.placeholder.com/300x200?text=Smartphone" class="card-img-top" alt="Mobile">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Mobile</h5>
-                        <p class="card-text text-muted">Latest smartphone</p>
-                        <p class="h5">₹30,000 <span class="badge badge-sale fs-6">Sale</span></p>
-                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#productModal" onclick="updateModal('Mobile', 'Latest flagship smartphone with pro camera.', '₹30,000')">View Details</button>
+                <div class="card product-card h-100">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Mobile">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">Mobile</h5>
+                        <p class="text-muted">Latest smartphone</p>
+                        <p class="price-display">₹30,000 <span class="badge status-sale">Sale</span></p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailsModal" onclick="setModalContent('Mobile', 'Latest flagship smartphone with pro camera.', '₹30,000')">
+                            View Details
+                        </button>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="https://via.placeholder.com/300x200?text=Headphones" class="card-img-top" alt="Headphones">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Headphones</h5>
-                        <p class="card-text text-muted">Noise cancelling</p>
-                        <p class="h5">₹5,000 <span class="badge badge-new fs-6">New</span></p>
-                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#productModal" onclick="updateModal('Headphones', 'Premium noise cancelling headphones.', '₹5,000')">View Details</button>
+                <div class="card product-card h-100">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Headphones">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">Headphones</h5>
+                        <p class="text-muted">Noise cancelling</p>
+                        <p class="price-display">₹5,000 <span class="badge status-new">New</span></p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailsModal" onclick="setModalContent('Headphones', 'Premium noise cancelling headphones.', '₹5,000')">
+                            View Details
+                        </button>
                     </div>
                 </div>
             </div>
 
         </div>
-    </div>
+    </main>
 
-    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitle">Product Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="modalProductTitle">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <p id="modalDesc"></p>
-                    <p class="fw-bold text-primary" id="modalPrice"></p>
+                    <p id="modalProductDesc" class="text-secondary"></p>
+                    <h4 id="modalProductPrice" class="text-primary fw-bold"></h4>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -87,7 +93,7 @@
         </div>
     </div>
 
-    <footer class="footer text-center mt-auto">
+    <footer class="main-footer text-center mt-auto">
         <div class="container">
             <p class="mb-0">© 2026 TechStore | Follow us on social media</p>
         </div>
@@ -95,10 +101,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        function updateModal(title, desc, price) {
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalDesc').innerText = desc;
-            document.getElementById('modalPrice').innerText = "Price: " + price;
+        function setModalContent(name, description, price) {
+            document.getElementById('modalProductTitle').innerText = name;
+            document.getElementById('modalProductDesc').innerText = description;
+            document.getElementById('modalProductPrice').innerText = "Price: " + price;
         }
     </script>
 </body>
