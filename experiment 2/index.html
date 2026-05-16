@@ -16,7 +16,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainMenu">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto text-center">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">About</a></li>
@@ -26,13 +26,13 @@
         </div>
     </nav>
 
-    <main class="container my-5">
-        <div class="row g-4">
+    <main class="container my-5 flex-grow-1 d-flex align-items-center">
+        <div class="row g-4 justify-content-center w-100 mx-auto">
             
-            <div class="col-md-4">
-                <div class="card product-card h-100">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Laptop">
-                    <div class="card-body text-center">
+            <div class="col-sm-10 col-md-6 col-lg-4 d-flex justify-content-center">
+                <div class="card product-card w-100">
+                    <img src="laptop.webp" class="card-img-top mx-auto" alt="Laptop">
+                    <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
                         <h5 class="fw-bold">Laptop</h5>
                         <p class="text-muted">High performance laptop</p>
                         <p class="price-display">₹50,000 <span class="badge status-new">New</span></p>
@@ -43,10 +43,10 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card product-card h-100">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Mobile">
-                    <div class="card-body text-center">
+            <div class="col-sm-10 col-md-6 col-lg-4 d-flex justify-content-center">
+                <div class="card product-card w-100">
+                    <img src="phone.webp" class="card-img-top mx-auto" alt="Mobile">
+                    <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
                         <h5 class="fw-bold">Mobile</h5>
                         <p class="text-muted">Latest smartphone</p>
                         <p class="price-display">₹30,000 <span class="badge status-sale">Sale</span></p>
@@ -57,10 +57,10 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card product-card h-100">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Headphones">
-                    <div class="card-body text-center">
+            <div class="col-sm-10 col-md-6 col-lg-4 d-flex justify-content-center">
+                <div class="card product-card w-100">
+                    <img src="headphone.webp" class="card-img-top mx-auto" alt="Headphones">
+                    <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
                         <h5 class="fw-bold">Headphones</h5>
                         <p class="text-muted">Noise cancelling</p>
                         <p class="price-display">₹5,000 <span class="badge status-new">New</span></p>
@@ -76,18 +76,18 @@
 
     <div class="modal fade" id="detailsModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalProductTitle">Product Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <div class="modal-content text-center">
+                <div class="modal-header d-flex justify-content-center position-relative border-0 pt-4">
+                    <h5 class="modal-title fw-bold mx-auto" id="modalProductTitle">Product Details</h5>
+                    <button type="button" class="btn-close position-absolute end-0 me-3 top-50 translate-middle-y" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <p id="modalProductDesc" class="text-secondary"></p>
                     <h4 id="modalProductPrice" class="text-primary fw-bold"></h4>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success">Add to Cart</button>
+                <div class="modal-footer border-0 pb-4 justify-content-center">
+                    <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success px-4">Add to Cart</button>
                 </div>
             </div>
         </div>
