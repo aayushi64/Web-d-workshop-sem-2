@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9fafb;
+    color: #111827;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #34495e;
+    color: white;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 24px;
+}
+
+nav a:hover {
+    color: #d1d5db;
+}
+
+.hero {
+    background: linear-gradient(to right, #85b4ed, #8753e1);
+    color: white;
+    text-align: center;
+    padding: 80px 16px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 24px;
+    color: #f0f7ff;
+}
+
+.hero button {
+    background-color: white;
+    color: #2563eb;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.hero button:hover {
+    background-color: #f3f4f6;
+}
+
+main {
+    flex-grow: 1;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+main h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 32px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 4px;
+    border: 1px solid #f3f4f6;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    color: #ef4444;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+footer {
+    background: linear-gradient(to right, #85b4ed, #8753e1);
+    color: white;
+    padding: 24px 16px;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer p {
+    margin-bottom: 4px;
+}
+
+footer p.contact {
+    opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+}
