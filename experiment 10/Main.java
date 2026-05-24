@@ -29,7 +29,7 @@ class SavingsAccount extends BankAccount {
         super(accountNumber, accountHolderName, balance);
     }
     @Override
-    void calculateInterest() {
+    void calculateInterest() { 
         double interest = balance * 0.05; // 5% interest
         System.out.println("Interest Added: " + interest);
     }
@@ -39,7 +39,7 @@ class CurrentAccount extends BankAccount {
     CurrentAccount(int accountNumber, String accountHolderName, double balance){
         super(accountNumber, accountHolderName, balance);
     }
-    void calculateInterest() {
+void calculateInterest() {
         double interest = balance*0.02; // 2% interest
         System.out.println("Current Account Interest: " + interest);
     }
