@@ -58,8 +58,8 @@ class CurrentAccount extends BankAccount {
 public class Main {
     public static void main(String[] args) {
         // Creating objects
-        SavingsAccount sa = new SavingsAccount(101, "Rahul", 10000);
-        CurrentAccount ca = new CurrentAccount(102, "Anita", 20000);
+        SavingsAccount sa = new SavingsAccount(101, "Aayushi", 10000);
+        CurrentAccount ca = new CurrentAccount(102, "Aditi", 20000);
 
         System.out.println("----- Savings Account -----");
         sa.deposit(2000);
@@ -72,5 +72,9 @@ public class Main {
         ca.deposit(3000);
         ca.displayDetails();
         ca.calculateInterest();
+        System.out.println();
+        System.out.println("----- Footer Info -----");
+        System.out.println("Aayushi Sharma");
+        System.out.println("Roll Number: 2503201000022");
     }
-}
+    }
