@@ -69,6 +69,10 @@ function App() {
       </form>
 
       {users.length > 0 && <RegistrationList userArray={users} />}
+      <div className="footer-info" style={{ textAlign: 'center', marginTop: '20px' }}>
+        <h3>Aayushi Sharma</h3>
+        <h4>Roll Number: 2503201000022</h4>
+      </div>
     </div>
   );
 }
