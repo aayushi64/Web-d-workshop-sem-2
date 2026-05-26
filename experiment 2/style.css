@@ -55,3 +55,9 @@ body {
     color: #6c757d;
     padding: 25px 0;
 }
+.footer-info {
+  margin-top: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
