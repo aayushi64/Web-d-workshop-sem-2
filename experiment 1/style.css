@@ -1,0 +1,46 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-section {
+    background-color: #3b82f6;
+    color: white;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.main-content {
+    flex: 1 0 auto;
+    background-color: #f4f4f4;
+    padding: 60px 0;
+}
+
+.site-footer {
+    flex-shrink: 0;
+    background-color: #333;
+    color: #ccc;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .col-divider {
+        border-right: 3px solid black;
+    }
+}

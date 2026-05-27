@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Demo</title>
+</head>
+<body>
+    <h2 id="demo">Hello Students</h2>
+    <script>
+        // DEMO
+        document.getElementById("demo").innerHTML = "Welcome to Javascript";
+
+        // VARIABLES & IF-ELSE
+        let name = "aayushi";
+        let age = 20;
+        console.log("name: " + name);
+        console.log("age: " + age);
+
+        let marks = 15;
+        if (marks >= 50) {
+            console.log("pass");
+        } else {
+            console.log("fail");
+        }
+
+        // SWITCH CASE
+        let day = 3;
+        switch(day) {
+            case 1: console.log("monday"); break;
+            case 2: console.log("tuesday"); break;
+            case 3: console.log("wednesday"); break;
+            case 4: console.log("thursday"); break;
+            case 5: console.log("friday"); break;
+            case 6: console.log("weekend"); break;
+            default: console.log("invalid day");
+        }
+
+        // JSON stringify & parse
+        let student = { name: "aayushi", age: 20 };
+        let jsondata = JSON.stringify(student);
+        console.log(jsondata);
+
+        let jsonstring = `{"name":"aayushi","age":20}`;
+        let obj = JSON.parse(jsonstring);
+        console.log(obj.name);
+
+        // FOR IN LOOP
+        let student2 = { name: "amit", age: 20, course: "MCA" };
+        for (let key in student2) {
+            console.log(key + " : " + student2[key]);
+        }
+
+        // FOR OF LOOP
+        let numbers = [1, 2, 3, 4, 5];
+        for (let num of numbers) {
+            console.log(num);
+        }
+
+        // ASYNC/AWAIT
+        function getdata() {
+            return new Promise((resolve) => {
+                setTimeout(() => { resolve("Data received"); }, 2000);
+            });
+        }
+        async function showdata() {
+            let result = await getdata();
+            console.log(result);
+        }
+        showdata();
+
+        // FETCH API
+        fetch('https://jsonplaceholder.typicode.com/posts/1')
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
+
+        // ERROR HANDLING
+        try {
+            let y = 5;
+            let x = y + 10;
+            console.log(x);
+        } catch (error) {
+            console.log("An error occurred: ", error);
+        }
+
+        // LOCAL STORAGE
+        localStorage.setItem("username", "aayushi");
+        let storedName = localStorage.getItem("username");
+        console.log(storedName);
+        localStorage.removeItem("username");
+        console.log(localStorage.getItem("username"));
+    </script>
+</body>
+</html>
