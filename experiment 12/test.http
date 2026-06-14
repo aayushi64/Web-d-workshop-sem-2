@@ -1,0 +1,9 @@
+GET http://localhost:8081/api/students
+PUT http://localhost:8081/api/students/4
+Content-Type: application/json
+
+{
+  "name": "Tuggu Updated",
+  "email": "tuggu_new@gmail.com",
+  "course": "CSE"
+}
