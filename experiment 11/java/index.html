@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> under java/com/abes/java</p>
+    <p>not under test/java/com/abes/java</p>
+    <p> resources-> application.java -> server.port=8082(integtrate this too in the existing base)</p>
+    <hr>
+    <h4> to run the code go to java/com/abes/java then to javaapplication and run the button</h4>
+    <hr>
+    <h4> to run the terminal for second time paste this</h4>
+    <pre>
+        $body = @{
+>>     id = 101
+>>     name = "Rahul Sharma"
+>>     course = "B.Tech CSE"
+>> } | ConvertTo-Json
+>> 
+>> Invoke-RestMethod -Uri "http://localhost:8082/student" -Method Post -ContentType "application/json" -Body $body
+    </pre>
+
+</body>
+</html>
